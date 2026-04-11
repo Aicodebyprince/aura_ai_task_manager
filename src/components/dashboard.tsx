@@ -110,7 +110,7 @@ const TaskCard = ({ task, users, teams, onUpdateTask, onDeleteTask }: TaskCardPr
 
   return (
     <motion.div
-      ref={drag as React.Ref<HTMLDivElement>}
+      ref={drag as unknown as React.Ref<HTMLDivElement>}
       layout
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
@@ -316,7 +316,7 @@ const DropZone = ({ status, children, onDrop }: {
 
   return (
     <div
-      ref={drop}
+      ref={drop as unknown as React.Ref<HTMLDivElement>}
       className={`min-h-[500px] rounded-lg transition-colors duration-200 ${
         isOver ? 'bg-blue-500/10 border-2 border-blue-500/30' : ''
       }`}

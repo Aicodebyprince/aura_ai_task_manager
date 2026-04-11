@@ -334,23 +334,26 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
           const existingTeam = appState.teams.find(t => t.id === id);
           
           if (existingTeam) {
-            // Automatically promote any NEW pending members to full members
-            const newMembers = (team.pendingMembers || []).filter(m => !existingTeam.members.includes(m));
-            if (newMembers.length > 0) {
-              teamData.members = [...new Set([...(team.members || existingTeam.members), ...newMembers])];
-              teamData.pendingMembers = (team.pendingMembers || []).filter(m => !newMembers.includes(m));
+            // Find NEW pending members to send invites
+            const currentPending = existingTeam.pendingMembers || [];
+            const updatedPending = teamData.pendingMembers || [];
+            const newPending = updatedPending.filter(m => !currentPending.includes(m) && !existingTeam.members.includes(m));
+            
+            for (const userId of newPending) {
+              await createActivity('team_invite', id, team.name, userId, { id: appState.currentUser!.id, name: appState.currentUser!.name });
             }
           }
           await updateDoc(teamRef, teamData);
         } else { // New team
-          // Automatically add all members directly instead of pending
-          const finalTeamData = {
-            ...teamData,
-            members: [...new Set([...(teamData.members || []), ...(teamData.pendingMembers || [])])],
-            pendingMembers: []
-          };
-          const docRef = await addDoc(collection(db, 'teams'), finalTeamData);
+          const docRef = await addDoc(collection(db, 'teams'), teamData);
           await createActivity('created_team', docRef.id, team.name);
+          
+          // Send invites to all pending members
+          if (teamData.pendingMembers && teamData.pendingMembers.length > 0) {
+            for (const userId of teamData.pendingMembers) {
+              await createActivity('team_invite', docRef.id, team.name, userId, { id: appState.currentUser!.id, name: appState.currentUser!.name });
+            }
+          }
         }
       }
     }

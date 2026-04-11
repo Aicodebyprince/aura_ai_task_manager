@@ -586,7 +586,21 @@ const PilotPanel = () => {
                                             </Button>
                                         </div>
                                     </>
-                                ) : (activity as any).action === 'team_invite' ? null : activity.action === 'colleague_accepted' ? (
+                                ) : activity.action === 'team_invite' && activity.status === 'pending' ? (
+                                    <>
+                                        <p><span className="font-bold">{activity.fromUser?.name}</span> invited you to join <span className="font-bold">{activity.targetName}</span>.</p>
+                                        <div className="flex gap-2 mt-2">
+                                            <Button size="sm" className="h-7 text-xs" onClick={() => handleTeamInvite(activity, 'accept')}>
+                                                <UserCheck className="w-3 h-3 mr-1" /> Accept
+                                            </Button>
+                                            <Button size="sm" variant="destructive" className="h-7 text-xs" onClick={() => handleTeamInvite(activity, 'reject')}>
+                                                <UserX className="w-3 h-3 mr-1" /> Reject
+                                            </Button>
+                                        </div>
+                                    </>
+                                ) : activity.action === 'team_invite' ? (
+                                    <p>Team invite for <span className="font-bold">{activity.targetName}</span> was <span className="font-bold">{activity.status}</span>.</p>
+                                ) : activity.action === 'colleague_accepted' ? (
                                     <p>You are now colleagues with <span className="font-bold">{activity.targetName}</span>.</p>
                                 ) : activity.action === 'colleague_rejected' ? (
                                     <p><span className="font-bold">{activity.targetName}</span> rejected your colleague request.</p>
@@ -1234,7 +1248,7 @@ export function EnhancedDashboard() {
   ];
 
   const pendingRequests = activities.filter(
-    (a) => a.action === 'colleague_request' && a.status === 'pending'
+    (a) => (a.action === 'colleague_request' || a.action === 'team_invite') && a.status === 'pending'
   );
 
 
@@ -1316,7 +1330,7 @@ export function EnhancedDashboard() {
                                 </Button>
                               </div>
                             </>
-                          ) : req.action === 'team_invite' ? null : (
+                          ) : (
                             <>
                               <p className="text-sm">
                                 <span className="font-medium">{req.fromUser?.name}</span> invited you to join <span className="font-medium">{req.targetName}</span>.
