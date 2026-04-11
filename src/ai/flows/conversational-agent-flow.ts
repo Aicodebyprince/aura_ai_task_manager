@@ -13,7 +13,7 @@ import {
   ConversationalAgentOutputSchema,
   type ConversationalAgentOutput,
 } from '@/ai/schemas/conversational-agent-schema';
-import {z} from 'zod';
+import {z} from 'genkit';
 
 export async function conversationalAgent(
   input: ConversationalAgentInput
@@ -139,11 +139,11 @@ const conversationalAgentFlow = ai.defineFlow(
       }
 
       return output;
-    } catch (error) {
+    } catch (error: any) {
       console.error('Error in conversationalAgentFlow:', error);
       return {
         response:
-          "I'm sorry, I encountered an error while generating a response. Please try again.",
+          `I'm sorry, I encountered an error while generating a response${error.message ? ': ' + error.message : ''}. Please try again.`,
       };
     }
   }
