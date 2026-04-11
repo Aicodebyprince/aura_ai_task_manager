@@ -19,28 +19,42 @@ This document contains the assets requested for your project presentation and re
 
 ---
 
-## 2. Presentation Deck AI Prompt
+## 2. Master Presentation Deck AI Prompt
 
-Copy and paste this prompt into an AI like Gemini 1.5 Pro or GPT-4 to generate a full presentation outline and content.
+This prompt is engineered to extract a presentation that reflects the **exact** technical architecture and feature set of the Aura AI codebase. Copy the block below:
 
-> **PROMPT:**
-> "I need a high-end, professional 10-slide presentation deck for a project called **Aura AI**. Aura AI is an intelligent SaaS platform that uses a 'Hybrid Intelligence' model—combining Google Gemini (Genkit) with custom deterministic algorithms for task management and team optimization.
-> 
-> Please provide a detailed structure for each slide including: **Slide Title**, **Key Bullets**, and **Visual Suggestion**.
-> 
-> **The presentation must cover:**
-> 1. **Title Slide:** Aura AI - The Intelligent Productivity Operating System.
-> 2. **The Problem:** Cognitive overload, decision fatigue, and subjective team management.
-> 3. **The Solution:** A bento-grid workspace integrated with a conversational AI agent and deterministic scheduling.
-> 4. **Core Technology:** Next.js 15, Genkit, Firebase, and Framer Motion.
-> 5. **Algorithm Spotlight 1:** The 8-Hour Daily Planner (A knapsack-style heuristic for time-boxing).
-> 6. **Algorithm Spotlight 2:** The Multi-Metric Team Assigner (A weighted engine scoring availability, skills, and reliability).
-> 7. **User Experience:** Focus on glassmorphism, micro-animations, and light/dark mode optimization.
-> 8. **Market Scalability:** Modular AI actions and serverless edge-ready architecture.
-> 9. **Impact & Metrics:** Reduced planning time, increased task completion rates, and objective performance tracking.
-> 10. **Conclusion & CTA:** The future of work is Aura AI.
-> 
-> Use a tone that is professional, authoritative, and innovative. Focus on the value proposition of 'Hybrid Intelligence'."
+> **[MASTER PROMPT START]**
+> "Act as a World-Class SaaS Product Architect and Pitch Deck Expert. I need a comprehensive 12-slide presentation deck for my project: **Aura AI - The Hybrid Intelligence Workspace**.
+>
+> **Project Core Essence:** 
+> Aura AI is built on Next.js 15 and uses 'Hybrid Intelligence'—a fusion of LLM-driven conversational flows (Google Genkit + Gemini Pro) and deterministic, heuristic algorithms (Knapsack and Weighted Scoring) to solve task management bottlenecks.
+>
+> **Technical Stack to Include:**
+> - Frontend: Next.js 15 (Turbopack), Tailwind CSS, Framer Motion.
+> - State Layer: React Context-based unified workspace state.
+> - Data: Firebase Firestore (Real-time sync) and Auth.
+> - AI Layer: Google Genkit orchestrating modular flows (Prioritizer, Summarizer, Planner).
+> - UI/UX: Bento-grid architecture, glassmorphism, responsive light/dark optimization.
+>
+> **Please generate a structure for 12 slides. For each slide, provide: [Title], [Detailed Content Bullets], [Core Value Proposition], and [Visual/Graph Suggestion].**
+>
+> **Slide Requirements:**
+> 1. **Title:** Aura AI: Beyond Automation. (Focus on 'Thinking' workspaces).
+> 2. **The Bottleneck:** Discuss the cost of 'Context Switching' and 'Decision Fatigue' in project management.
+> 3. **The Hybrid Solution:** Explain the 'Aura Intelligence Model'—where LLMs handle the 'What' (natural language) and Algorithms handle the 'How' (scheduling/optimization).
+> 4. **Feature: The Intelligent Bento Dashboard:** Detail the glassmorphic, real-time interface with Activity Feeds and the Aura Assistant Chat.
+> 5. **Technical Deep Dive 1: The 8-Hour Daily Planner:** Explain the Knapsack algorithm implementation—Overdue protection, Priority sorting, and 8-hour continuous time-boxing.
+> 6. **Technical Deep Dive 2: Multi-Metric Auto-Assigner:** Detail the 5-metric weighted score (Availability 30%, Skills 20%, Completion 20%, Punctuality 20%, Efficiency 10%).
+> 7. **The AI Toolkit:** Showcase the modular architecture of 'Aura Actions' (Summarizer, Study Buddy, Resource Recommender, Quiz Creator).
+> 8. **UX Excellence:** Focus on the 'Flow State' design—Framer Motion micro-animations, bento-grid density, and the dual-mode color system.
+> 9. **Real-time Analytics:** Explain the Recharts-powered performance visualization (Execution vs. Estimation accuracy).
+> 10. **Scalability & Security:** Discuss the Serverless architecture, Firebase backend, and multi-tenant readiness.
+> 11. **The Impact:** Concrete 40% reduction in daily planning time and objective (bias-free) team resource allocation.
+> 12. **The Vision & Roadmap:** Aura AI as the central brain for the modern enterprise.
+>
+> **Tone:** Futuristic, data-driven, premium, and authoritative. 
+> **Constraint:** Ensure the distinction between 'Generative AI' and 'Deterministic Heuristics' is a central theme in the technical slides."
+> **[MASTER PROMPT END]**
 
 ---
 
