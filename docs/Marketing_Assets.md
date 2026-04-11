@@ -1,64 +1,62 @@
-# 🎬 Aura AI: Marketing & Presentation Assets
+# 🎬 Aura AI: Ultimate Marketing & Presentation Strategy
 
-This document contains the assets requested for your project presentation and recording.
-
----
-
-## 1. Demo Video Script (4-Minute Duration)
-
-**Target Audience:** Potential investors, project managers, and tech-savvy users.
-**Vibe:** Professional, sleek, futuristic, and efficient.
-
-| Time | Scene / Visual | Narration (Script) |
-| :--- | :--- | :--- |
-| **0:00 - 0:30** | **Intro:** Hook & Problem. Show a busy, messy desktop or a generic task list. Transition to the Aura AI Landing Page. | "Meet Alex. Alex is a Project Manager. Every morning, Alex spends an hour just... planning. Deciding what task is next, who's free to handle the latest bug, and tracking time. This isn't productivity. It's cognitive debt. Welcome to **Aura AI**—the intelligent productivity operating system that thinks as fast as you do." |
-| **0:30 - 1:30** | **Feature 1:** The AI Assistant & Daily Planning. Alex types 'Plan my day' into the chat. Watch the schedule populate. | "Aura isn't just a chatbot. It’s an architect. Using our Knapsack-inspired 8-hour daily planner algorithm, Aura doesn't just list tasks; it time-boxes them. It prioritizes overdue blockers and maps your entire day into efficient chunks. Alex just says 'Plan my day,' and his entire schedule is architected in seconds. Decision fatigue? Solved." |
-| **1:30 - 2:30** | **Feature 2:** Team Management & Auto-Assign. Open a task, click 'AI Auto-Assign'. Show the 3 recommended users with match percentages. | "But what about the team? Subjective task assignment is the silent killer of team morale. Aura’s proprietary **Weighted Multi-Metric Assigner** evaluates team members across five dimensions: availability, skill match, historical speed, and punctuality. It gives Alex a data-driven recommendation, ensuring the right task always goes to the right person." |
-| **2:30 - 3:30** | **Feature 3:** Analytics & The AI Toolkit. Show the bento-grid analytics charts and then open the 'AI Features' panel (Prioritizer, Summarizer). | "Consistency is key. Aura’s real-time analytics dashboard visualizes execution efficiency, helping Alex identify bottlenecks before they become blockers. And with the built-in AI Toolkit, Alex can summarize long project threads, prioritize massive backlogs, and generate study guides—all within a single, glassmorphic interface." |
-| **3:30 - 4:00** | **Conclusion:** Impact & CTA. Show a clean, organized dashboard with a 'Done' badge. Logo animation. | "Aura AI bridges the gap between conversational ease and algorithmic precision. It’s less time planning, more time building. The future of work isn't just automated—it’s intelligent. Elevate your workflow. This is Aura AI. Your move." |
+This document contains the finalized, project-anchored assets for your pitch recording and presentation.
 
 ---
 
-## 2. Master Presentation Deck AI Prompt
+## 1. Professional Demo Video Script (4-Minute HD)
 
-This prompt is engineered to extract a presentation that reflects the **exact** technical architecture and feature set of the Aura AI codebase. Copy the block below:
-
-> **[MASTER PROMPT START]**
-> "Act as a World-Class SaaS Product Architect and Pitch Deck Expert. I need a comprehensive 12-slide presentation deck for my project: **Aura AI - The Hybrid Intelligence Workspace**.
->
-> **Project Core Essence:** 
-> Aura AI is built on Next.js 15 and uses 'Hybrid Intelligence'—a fusion of LLM-driven conversational flows (Google Genkit + Gemini Pro) and deterministic, heuristic algorithms (Knapsack and Weighted Scoring) to solve task management bottlenecks.
->
-> **Technical Stack to Include:**
-> - Frontend: Next.js 15 (Turbopack), Tailwind CSS, Framer Motion.
-> - State Layer: React Context-based unified workspace state.
-> - Data: Firebase Firestore (Real-time sync) and Auth.
-> - AI Layer: Google Genkit orchestrating modular flows (Prioritizer, Summarizer, Planner).
-> - UI/UX: Bento-grid architecture, glassmorphism, responsive light/dark optimization.
->
-> **Please generate a structure for 12 slides. For each slide, provide: [Title], [Detailed Content Bullets], [Core Value Proposition], and [Visual/Graph Suggestion].**
->
-> **Slide Requirements:**
-> 1. **Title:** Aura AI: Beyond Automation. (Focus on 'Thinking' workspaces).
-> 2. **The Bottleneck:** Discuss the cost of 'Context Switching' and 'Decision Fatigue' in project management.
-> 3. **The Hybrid Solution:** Explain the 'Aura Intelligence Model'—where LLMs handle the 'What' (natural language) and Algorithms handle the 'How' (scheduling/optimization).
-> 4. **Feature: The Intelligent Bento Dashboard:** Detail the glassmorphic, real-time interface with Activity Feeds and the Aura Assistant Chat.
-> 5. **Technical Deep Dive 1: The 8-Hour Daily Planner:** Explain the Knapsack algorithm implementation—Overdue protection, Priority sorting, and 8-hour continuous time-boxing.
-> 6. **Technical Deep Dive 2: Multi-Metric Auto-Assigner:** Detail the 5-metric weighted score (Availability 30%, Skills 20%, Completion 20%, Punctuality 20%, Efficiency 10%).
-> 7. **The AI Toolkit:** Showcase the modular architecture of 'Aura Actions' (Summarizer, Study Buddy, Resource Recommender, Quiz Creator).
-> 8. **UX Excellence:** Focus on the 'Flow State' design—Framer Motion micro-animations, bento-grid density, and the dual-mode color system.
-> 9. **Real-time Analytics:** Explain the Recharts-powered performance visualization (Execution vs. Estimation accuracy).
-> 10. **Scalability & Security:** Discuss the Serverless architecture, Firebase backend, and multi-tenant readiness.
-> 11. **The Impact:** Concrete 40% reduction in daily planning time and objective (bias-free) team resource allocation.
-> 12. **The Vision & Roadmap:** Aura AI as the central brain for the modern enterprise.
->
-> **Tone:** Futuristic, data-driven, premium, and authoritative. 
-> **Constraint:** Ensure the distinction between 'Generative AI' and 'Deterministic Heuristics' is a central theme in the technical slides."
-> **[MASTER PROMPT END]**
+| Segment | Timing | Visual Direction | Script / Narration |
+| :--- | :--- | :--- | :--- |
+| **Intro** | 0:00-0:45 | Show the premium Auth page, then transition to a clean, empty Bento Dashboard. | "Management is broken. For decades, we’ve relied on flat lists and gut feelings to run our teams. But today, the speed of work exceeds the speed of manual planning. Introducing Aura AI: The Productivity Operating System that uses Hybrid Intelligence to help teams think, plan, and execute at scale." |
+| **Feature 1** | 0:45-1:45 | Demonstrate the **8-Hour Daily Planner**. Type 'Plan my day' in the Aura Chat. Show the schedule appearing. | "Meet the Daily Planner. Aura doesn't just list tasks—it architects your day. Our Knapsack-inspired heuristic takes your overdue blockers and priority items, then maps a continuous 8-hour focus-driven schedule. It’s not a list; it’s an execution roadmap that updates in real-time." |
+| **Feature 2** | 1:45-2:45 | Go to **Team Management**. Show the **AI Auto-Assign** flow. Highlight the match percentages. | "Assignment bias is gone. With Aura’s Multi-Metric Assigner, Project Managers see the truth. We score every team member on five dimensions—availability, skills, history, punctuality, and efficiency. Aura recommends the top three candidates based on hard data, ensuring the right talent always meets the right task." |
+| **Feature 3** | 2:45-3:30 | Open **Analytics**. Pan across the Recharts heatmaps and Efficiency Radials. Open the **AI Toolkit**. | "Visibility is productivity. Aura's Intelligence Center provides deep insights into task patterns and on-time rates. Need more? Our built-in AI Toolkit offers specialized Genkit flows—from summarizing complex docs to creating instant knowledge quizzes. Everything happens inside one, seamless, glassmorphic experience." |
+| **Conclusion** | 3:30-4:00 | Close on the 'Done' state of a high-priority task. Logo loop. | "Aura AI is more than a manager. It’s a force-multiplier. Less planning, zero guesswork, total execution. Aura AI: The future of work is here. Elevate your team today." |
 
 ---
 
-## 3. Additional Support
-- **Project Structure:** All files are well-organized in `/src/components` and `/src/ai/flows`.
-- **Technologies:** Next.js (Frontend), Firebase (Backend/Auth), Gemini/Genkit (AI), Framer Motion (UX).
-- **Setup:** Clear instructions are now in the updated `README.md`.
+## 2. THE ULTIMATE PRESENTATION PROMPT (Master Level)
+
+Copy and paste this prompt into Gemini 1.5 Pro, GPT-4o, or Claude 3.5 Sonnet to generate the best possible slide deck for this specific project.
+
+> **[ULTIMATE PROMPT START]**
+> "Act as a Silicon Valley Pitch Deck Designer and Senior Software Architect. I am presenting **Aura AI: The Hybrid Intelligence Workspace** and I need a 12-slide high-impact presentation structure. 
+>
+> **Project Core Truths (MUST INCLUDE):**
+> 1. **Hybrid Model:** The project combines LLM Conversational Logic (Google Genkit/Gemini) with Deterministic Algorithms (Knapsack Scheduling & Weighted Talent Matching).
+> 2. **Tech Stack:** Next.js 15 (Turbopack), Firebase (Real-time DB), Framer Motion (Premium UX), Recharts (Data Science).
+> 3. **The 'Killer' Algorithm:** The Weighted Team Assigner (Availability 30%, Skills 20%, Completion 20%, Punctuality 20%, Efficiency 10%).
+> 4. **Design Philosophy:** Premium Bento-Grid, Glassmorphism, and Fully Optimized Light/Dark modes.
+>
+> **Generate SLIDE CONTENT for these 12 slides:**
+> - **Slide 1: Title Slide.** 'Aura AI - Thinking Workspaces for High-Performance Teams.'
+> - **Slide 2: The Modern Chaos.** Visualizing the 'Planning Gap' and Decision Fatigue. 
+> - **Slide 3: Hybrid Intelligence defined.** Why Generative AI is not enough on its own (needs deterministic math).
+> - **Slide 4: The Intelligent Bento.** Aesthetics meets Data Density.
+> - **Slide 5: Deep Dive: The 8-Hour Architect.** How our Knapsack algorithm eliminates morning planning time.
+> - **Slide 6: Deep Dive: The Talent Engine.** Breaking down the 5-Metric Weighted Assignment logic.
+> - **Slide 7: The AI Toolkit Modular Flows.** Summarizers, Task-Prioritizers, and Knowledge Reinforcement.
+> - **Slide 8: Real-time Intelligence Center.** Using Recharts to visualize the 'Efficiency vs. Estimation' gap.
+> - **Slide 9: Collaborative Ecosystem.** Team Syncing, Activity Feeds, and Peer-to-Peer networking.
+> - **Slide 10: Underlying Architecture.** Serverless Next.js, Firebase Auth/Firestore, and Genkit orchestration.
+> - **Slide 11: The Performance Impact.** Objective results: 40% faster planning, bias-free resource allocation.
+> - **Slide 12: Call to Action.** 'Join the Productivity Revolution.'
+>
+> **For each slide, provide:**
+> - **[Title]**
+> - **[Narrative Script]** (What the presenter should say).
+> - **[Key Visual Elements]** (What graphs/images to show—Reference specific UI elements like 'Bento Cards', 'Heatmaps', or 'Matching Scores').
+> - **[The "Aura" Difference]** (The one unique technical feature of this slide).
+>
+> **Final Tone Control:** The deck must feel high-end, premium, and technically superior to standard 'AI Wrappers'."
+> **[ULTIMATE PROMPT END]**
+
+---
+
+## 3. Project File Guide (For reference during Presentation)
+- **Assignments:** `src/lib/assignment-algorithm.ts`
+- **Analytics:** `src/components/analytics.tsx`
+- **AI Logic:** `src/ai/flows/`
+- **Dashboard:** `src/components/enhanced-dashboard.tsx`
+- **Team Ops:** `src/components/team-management.tsx`
