@@ -1,85 +1,73 @@
-# ✨ Aura AI: The Ultimate Productivity Operating System
+# Aura AI: Hybrid Intelligence Task Management
 
-[![Built with Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
-[![AI Powered by Gemini](https://img.shields.io/badge/AI-Gemini%20&%20Genkit-blueviolet?style=for-the-badge&logo=google-gemini)](https://ai.google.dev/)
-[![Styled with Tailwind](https://img.shields.io/badge/Styling-Tailwind%20CSS-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
-[![Database Firebase](https://img.shields.io/badge/Backend-Firebase-FFCA28?style=for-the-badge&logo=firebase)](https://firebase.google.com/)
+![Aura AI Banner](https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=2000)
 
-Aura AI is a next-generation, AI-native SaaS platform designed to eliminate cognitive debt and streamline high-performance workflows. By fusing **Large Language Models (Gemini Pro)** with **Deterministic Heuristic Algorithms**, Aura transforms raw tasks into optimized execution strategies.
+Aura AI is a state-of-the-art, professional-grade task management ecosystem that bridges the gap between human intuition and machine precision. Designed for high-performance teams, Aura AI utilizes a **Hybrid Intelligence Architecture** to automate the cognitive overhead of coordination, allowing teams to focus on execution.
 
----
+## 🚀 Vision
+In the modern workplace, "coordination tax" often exceeds productive output. Aura AI solves this by implementing deterministic algorithms and probabilistic AI flows to handle task triage, assignment optimization, and team synchronization.
 
-## 🛑 The Problem: The "Planning Gap"
-Modern teams are drowning in tools but starving for clarity.
-1.  **Decision Fatigue:** Users waste peak cognitive hours deciding *what* to do.
-2.  **Subjective Bias:** Task assignment is often based on gut feeling rather than availability, skills, or reliability.
-3.  **Data Fragmentation:** Time-tracking, task-execution, and team-analytics are rarely unified in a single, cohesive intelligence layer.
+## 🛠 Tech Stack
+*   **Frontend**: Next.js 14, React, TypeScript
+*   **Styling**: Tailwind CSS (Glassmorphism & Premium UI Design)
+*   **Backend/BaaS**: Firebase (Firestore, Authentication, Analytics)
+*   **Animations**: Framer Motion (Micro-interactions & Page Transitions)
+*   **AI Engine**: Custom LangChain-inspired flows for task prioritization and summarization.
 
-## 💡 The Innovation: Hybrid Intelligence
-Aura AI bridges the "Planning Gap" using a **Hybrid Intelligence** model—combining the lateral reasoning of LLMs with the mathematical precision of custom heuristics.
+## 🧠 Core Algorithms
 
-### 1. The 8-Hour Daily Planner (Deterministic)
-Unlike basic schedulers, Aura's planner uses a **Knapsack-based heuristic** to:
-- **Overdue Protection:** Force-prioritize blockers.
-- **Continuous Mapping:** Time-box your next 8 working hours down to the minute.
-- **Dynamic Resiliency:** Automatically re-gap the schedule as you complete tasks.
+### 1. Intelligent Assignment Algorithm
+The heart of Aura AI is its deterministic assignment engine (`src/lib/assignment-algorithm.ts`). It calculates an **Assignee Score** through a multi-dimensional weighted formula:
 
-### 2. The Multi-Metric Team Assigner (Heuristic)
-Aura removes manager bias by scoring team members across five weighted metrics:
-- **Availability (30%)**: Real-time workload vs. capacity.
-- **Skill Match (20%)**: Semantic keyword matching between task descriptions and user resumes.
-- **Completion Rate (20%)**: Historical reliability index.
-- **Punctuality (20%)**: On-time delivery success rate.
-- **Efficiency (10%)**: The "Spent-vs-Estimated" speed ratio.
+$$Score = (A \times 0.3) + (S \times 0.2) + (C \times 0.2) + (T \times 0.2) + (E \times 0.1)$$
 
-### 3. Aura AI Toolkit (Generative)
-Orchestrated via **Google Genkit**, the Aura chat provides specialized context-aware flows:
-- **Task Prioritizer:** Intelligently backlogs massive task lists.
-- **Summarizer:** distills complex project threads/documents.
-- **Study Buddy & Quiz Creator:** Automates knowledge transfer and learning reinforcement.
-- **Resource Recommender:** Links tasks to relevant internal/external assets.
+*   **Availability (A)**: Real-time window calculation based on existing estimated workload.
+*   **Skill Match (S)**: Keyword analysis matching task requirements against member expertise.
+*   **Completion Rate (C)**: Historical data on the ratio of assigned vs. completed tasks.
+*   **On-Time Rate (T)**: Probabilistic measure of task delivery compared to deadlines.
+*   **Efficiency Score (E)**: Ratio of estimated vs. actual time spent on prior tasks.
 
----
+### 2. Task Flow Prioritizer
+Uses LLM-driven analysis to surface high-impact tasks by evaluating:
+*   Semantic urgency (detected through NLP).
+*   Systemic dependency (bottleneck detection).
+*   Strategic alignment (matching tasks to team goals).
 
-## 🎨 Premium UX & Performance
-- **Bento-Grid Architecture:** A high-density, glassmorphic dashboard that reduces visual noise.
-- **Productivity Intelligence Center:** Deep analytics using Recharts visualizing productivity trends, activity heatmaps, and efficiency radials.
-- **Motion Orchestration:** Premium haptic-like micro-interactions powered by Framer Motion.
-- **Adaptive UI:** Fully responsive and performance-tuned for both Light and Dark modes.
+## ✨ Key Features
+*   **Bento-Grid Dashboard**: A visual command center for personal and team productivity.
+*   **Group Intelligence**: Collaborative workspaces with real-time analytics and bulk AI task generation.
+*   **AI Assistant**: A resident pilot ("Aura") that provides daily schedule optimization and document summarization.
+*   **Live Activity Feed**: Real-time synchronization of team events, invitations, and progress.
+*   **Performance Analytics**: Deep-dive charts (Recharts) visualizing team velocity and individual contributions.
 
----
+## 🛡 Problem Solving
+Aura AI addresses three critical pain points in team management:
+1.  **Workload Imbalance**: Prevents burnout by identifying over-utilized members and suggesting available classmates/colleagues.
+2.  **Context Switching**: Minimizes mental fatigue through the "Priority Queue," ensuring the next most important task is always known.
+3.  **Communication Gaps**: Automated notifications and activity tracking eliminate the need for manual status updates.
 
-## 🛠️ Technical Stack
-- **Frontend:** Next.js 15 (App Router, Turbopack premium build engine).
-- **Styles:** Tailwind CSS + Radix/Shadcn UI (Customized Glassmorphism components).
-- **AI Core:** Google Genkit + Gemini 1.5 Pro.
-- **Backend:** Firebase Firestore (Real-time DB) + Firebase Auth.
-- **Analytics:** Recharts data-processing layer.
-- **State:** React Context API with persistent local optimization.
+## 📦 Getting Started
 
----
+1.  **Clone the Repository**
+    ```bash
+    git clone https://github.com/Aicodebyprince/Aura-AI-Task-Manager.git
+    ```
 
-## 🚀 Setup & Installation
+2.  **Install Dependencies**
+    ```bash
+    npm install
+    ```
 
-### Prerequisites
-- Node.js 18+
-- Firebase Project & Google Cloud Project
-- Google Gemini API Key
+3.  **Environment Setup**
+    Create a `.env.local` file with your Firebase configuration.
 
-### Deployment
-1.  **Clone:** `git clone https://github.com/Aicodebyprince/Aura-AI-Task-Manager.git`
-2.  **Config:** Populate `.env` with your GenAI and Firebase keys.
-3.  **Install:** `npm install`
-4.  **Launch:** `npm run dev`
+4.  **Run Development Server**
+    ```bash
+    npm run dev
+    ```
+
+## 📄 License
+This project is licensed under the MIT License.
 
 ---
-
-## 📊 Roadmap
-- **Proactive Anticipation:** Predicting bottlenecks before they happen using trend analysis.
-- **Mobile Native Parity:** Bringing the full bento-grid experience to Android/iOS.
-- **Enterprise Integrations:** One-click sync with Slack, Jira, and GitHub.
-
----
-
-### 📬 Support
-Created by the **Aura AI Engineering Team**. For inquiries, open an issue in the [Source Code Repository](https://github.com/Aicodebyprince/Aura-AI-Task-Manager.git).
+Built with ❤️ by the Aura AI Team.

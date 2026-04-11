@@ -474,7 +474,19 @@ export function Dashboard({
     if (selectedFilter === 'my-tasks') {
       tasks = tasks.filter(task => task.assignedTo?.includes(appState.currentUser!.id));
     } else if (selectedFilter === 'team-tasks') {
-      tasks = tasks.filter(task => task.teamId);
+      tasks = tasks.filter(task => {
+        const isAssignedToMe = task.assignedTo?.includes(appState.currentUser!.id);
+        const isUnassignedOnMyTeam = task.teamId && (!task.assignedTo || task.assignedTo.length === 0);
+        return isAssignedToMe || isUnassignedOnMyTeam;
+      });
+    } else {
+      // Default 'all' filter: Personal tasks + Assigned Team tasks + Unassigned Team tasks
+      tasks = tasks.filter(task => {
+        const isAssignedToMe = task.assignedTo?.includes(appState.currentUser!.id);
+        const isPersonalAndCreatedByMe = !task.teamId && task.createdBy === appState.currentUser!.id;
+        const isUnassignedOnMyTeam = task.teamId && (!task.assignedTo || task.assignedTo.length === 0);
+        return isAssignedToMe || isPersonalAndCreatedByMe || isUnassignedOnMyTeam;
+      });
     }
 
     return tasks;

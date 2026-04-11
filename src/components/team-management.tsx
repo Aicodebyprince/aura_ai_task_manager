@@ -148,12 +148,21 @@ export function TeamManagement() {
   const handleTeamTaskSubmit = () => {
     if (!newTaskForm.title.trim() || !selectedTeam || !currentUser) return;
 
+    // Ensure we are passing exactly what's in the form, 
+    // and if empty, it remains empty (unassigned) for team tasks
     const taskData = {
-        ...newTaskForm,
+        title: newTaskForm.title,
+        description: newTaskForm.description,
+        priority: newTaskForm.priority,
+        dueDate: newTaskForm.dueDate,
+        estimatedTime: newTaskForm.estimatedTime,
+        tags: newTaskForm.tags,
         teamId: selectedTeam.id,
         createdBy: currentUser.id,
+        assignedTo: newTaskForm.assignedTo || [],
         status: 'inbox' as const,
     };
+
     handleAddTask(taskData);
     setShowNewTaskDialog(false);
     setNewTaskForm({

@@ -309,49 +309,58 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
   }, [appState.settings.theme]);
 
   const handleUpdateAppState = useCallback(async (updates: Partial<AppState>) => {
+    if (updates.currentPage) {
+      setAppState(prev => ({ ...prev, currentPage: updates.currentPage! }));
+    }
+
+    if (updates.settings) {
+      setAppState(prev => ({ ...prev, settings: { ...prev.settings, ...updates.settings! } }));
+    }
+
     if (updates.users) {
       for (const user of updates.users) {
-        if (!user.id) continue;
-        const userRef = doc(db, 'users', user.id);
-        await setDoc(userRef, user, { merge: true });
-        if(!appState.users.some(u => u.id === user.id)) {
-            await createActivity('added_user', user.id, user.name);
+        const { id, ...userData } = user;
+        if (id) {
+          await updateDoc(doc(db, 'users', id), userData);
         }
       }
     }
+
     if (updates.teams) {
-       for (const team of updates.teams) {
+      for (const team of updates.teams) {
         const { id, ...teamData } = team;
         if (id) { // Existing team
-            const teamRef = doc(db, 'teams', id);
-            const existingTeam = appState.teams.find(t => t.id === id);
-            if(existingTeam) {
-                const newPending = team.pendingMembers.filter(m => !existingTeam.pendingMembers.includes(m));
-                for (const memberId of newPending) {
-                    const member = appState.users.find(u => u.id === memberId);
-                    if(member && appState.currentUser) {
-                        await createActivity('team_invite', id, team.name, memberId, { id: appState.currentUser.id, name: appState.currentUser.name });
-                    }
-                }
+          const teamRef = doc(db, 'teams', id);
+          const existingTeam = appState.teams.find(t => t.id === id);
+          
+          if (existingTeam) {
+            // Automatically promote any NEW pending members to full members
+            const newMembers = (team.pendingMembers || []).filter(m => !existingTeam.members.includes(m));
+            if (newMembers.length > 0) {
+              teamData.members = [...new Set([...(team.members || existingTeam.members), ...newMembers])];
+              teamData.pendingMembers = (team.pendingMembers || []).filter(m => !newMembers.includes(m));
             }
-            await updateDoc(teamRef, teamData);
+          }
+          await updateDoc(teamRef, teamData);
         } else { // New team
-            const docRef = await addDoc(collection(db, 'teams'), teamData);
-            await createActivity('created_team', docRef.id, team.name);
-            for (const memberId of team.pendingMembers) {
-              const member = appState.users.find(u => u.id === memberId);
-              if (member && appState.currentUser) {
-                await createActivity('team_invite', docRef.id, team.name, memberId, { id: appState.currentUser.id, name: appState.currentUser.name });
-              }
-            }
+          // Automatically add all members directly instead of pending
+          const finalTeamData = {
+            ...teamData,
+            members: [...new Set([...(teamData.members || []), ...(teamData.pendingMembers || [])])],
+            pendingMembers: []
+          };
+          const docRef = await addDoc(collection(db, 'teams'), finalTeamData);
+          await createActivity('created_team', docRef.id, team.name);
         }
       }
     }
+    
     if (updates.settings && appState.currentUser) {
       await setDoc(doc(db, 'settings', appState.currentUser.id), updates.settings, { merge: true });
     }
-    setAppState(prev => ({ ...prev, ...updates }));
-  }, [appState.currentUser, appState.teams, appState.users, createActivity]);
+    const { tasks: _, teams: __, activities: ___, users: ____, ...restUpdates } = updates;
+    setAppState(prev => ({ ...prev, ...restUpdates }));
+  }, [appState.teams, appState.users, appState.currentUser, appState.activities, createActivity]);
 
   const toggleTheme = useCallback(() => {
     const newTheme = appState.settings.theme === 'dark' ? 'light' : 'dark';
