@@ -73,8 +73,8 @@ Aura AI features a **Premium Bento-Grid Dashboard** designed with:
 ### Setup Instructions
 1.  **Clone the Repository:**
     ```bash
-    git clone https://github.com/Aicodebyprince/Auraai.git
-    cd Auraai
+    git clone https://github.com/Aicodebyprince/Aura-AI-Task-Manager.git
+    cd Aura-AI-Task-Manager
     ```
 2.  **Install Dependencies:**
     ```bash
@@ -111,4 +111,4 @@ Aura AI features a **Premium Bento-Grid Dashboard** designed with:
 ---
 
 ### 📬 Contact & Support
-Developed with ❤️ by the Aura AI Team. For inquiries, please open an issue in the [Source Code Repository](https://github.com/Aicodebyprince/Auraai).
+Developed with ❤️ by the Aura AI Team. For inquiries, please open an issue in the [Source Code Repository](https://github.com/Aicodebyprince/Aura-AI-Task-Manager).
