@@ -8,7 +8,7 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
 [![Firebase](https://img.shields.io/badge/Firebase-10.x-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)](https://firebase.google.com/)
 [![Genkit](https://img.shields.io/badge/Genkit-1.14-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://firebase.google.com/docs/genkit)
-[![OpenAI](https://img.shields.io/badge/OpenAI-GPT--4o--mini-412991?style=for-the-badge&logo=openai&logoColor=white)](https://platform.openai.com/)
+[![Gemini](https://img.shields.io/badge/Gemini-2.0_Flash-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://aistudio.google.com/)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
 <br/>
@@ -176,7 +176,7 @@ $$Score = (A \times 0.30) + (S \times 0.20) + (C \times 0.20) + (T \times 0.20) 
 | **Styling** | Tailwind CSS 3 | Utility-first CSS with custom glassmorphism design system |
 | **Animations** | Framer Motion 11 | Page transitions, micro-interactions, staggered list animations |
 | **AI Runtime** | Firebase Genkit 1.14 | Flow orchestration, tool definitions, prompt management |
-| **AI Model** | OpenAI GPT-4o-mini | Generative intelligence for the conversational agent — fast, cost-effective, with full function calling support |
+| **AI Model** | Google Gemini 2.0 Flash | Generative intelligence for the conversational agent — fast, cost-effective, with full function calling and tool use support |
 | **Database** | Firebase Firestore | Real-time NoSQL database with live listeners |
 | **Auth** | Firebase Authentication | Email/password auth with session management |
 | **Analytics** | Firebase Analytics | User event tracking |
@@ -256,7 +256,7 @@ Open [http://localhost:4000](http://localhost:4000) to access the Genkit Develop
 
 | Variable | Required | Description |
 |---|---|---|
-| `OPENAI_API_KEY` | ✅ Yes | OpenAI API key for GPT-4o-mini |
+| `GEMINI_API_KEY` | ✅ Yes | Google Gemini API key (get free at [aistudio.google.com](https://aistudio.google.com/app/apikey)) |
 | `NEXT_PUBLIC_FIREBASE_API_KEY` | ✅ Yes | Firebase project API key |
 | `NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN` | ✅ Yes | Firebase Auth domain |
 | `NEXT_PUBLIC_FIREBASE_PROJECT_ID` | ✅ Yes | Firestore project ID |
@@ -333,7 +333,7 @@ This is the central AI brain. It receives the user's chat message plus the full 
 }
 ```
 
-**Model:** `openai/gpt-4o-mini`
+**Model:** `googleai/gemini-2.0-flash`
 - Fast response times (<2s typical)
 - Strong instruction following for structured JSON output
 - Full tool use (function calling) support — powers the `createTask` tool

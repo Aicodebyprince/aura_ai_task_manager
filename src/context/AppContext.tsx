@@ -210,12 +210,15 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     if (appState.isLoggedIn && appState.currentUser) {
       let allUnsubs: Unsubscribe[] = [];
 
-      const personalTasksQuery = query(collection(db, 'tasks'), where('createdBy', '==', appState.currentUser.id), where('teamId', '==', null));
+      const personalTasksQuery = query(collection(db, 'tasks'), where('assignedTo', 'array-contains', appState.currentUser.id), where('teamId', '==', null));
       const personalTasksUnsub = onSnapshot(personalTasksQuery, (snapshot) => {
         const personalTasks = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() } as Task));
         setAppState(prev => {
           const teamTasks = prev.tasks.filter(t => t.teamId);
-          return { ...prev, tasks: [...personalTasks, ...teamTasks] };
+          // Deduplicate by ID
+          const merged = [...personalTasks, ...teamTasks];
+          const unique = Array.from(new Map(merged.map(t => [t.id, t])).values());
+          return { ...prev, tasks: unique };
         });
       });
       allUnsubs.push(personalTasksUnsub);
@@ -227,7 +230,10 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
           const teamTasks = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() } as Task));
           setAppState(prev => {
             const otherTasks = prev.tasks.filter(t => t.teamId !== team.id);
-            return { ...prev, tasks: [...otherTasks, ...teamTasks] };
+            // Deduplicate by ID
+            const merged = [...otherTasks, ...teamTasks];
+            const unique = Array.from(new Map(merged.map(t => [t.id, t])).values());
+            return { ...prev, tasks: unique };
           });
         });
         allUnsubs.push(teamTasksUnsub);

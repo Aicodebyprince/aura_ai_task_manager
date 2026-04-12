@@ -1161,9 +1161,11 @@ export function EnhancedDashboard() {
         const simpleUsers = users.map(u => ({id: u.id, name: u.name, email: u.email}));
         const simpleTeams = teams.map(t => ({id: t.id, name: t.name, members: t.members}));
 
+      const myTasks = tasksRef.current.filter(t => t.assignedTo?.includes(currentUser.id));
+
       const result = await conversationalAgent({
         query: message,
-        tasks: tasksRef.current,
+        tasks: myTasks,
         users: simpleUsers,
         teams: simpleTeams,
       });
@@ -1248,7 +1250,16 @@ export function EnhancedDashboard() {
   ];
 
   const pendingRequests = activities.filter(
-    (a) => (a.action === 'colleague_request' || a.action === 'team_invite') && a.status === 'pending'
+    (a) => {
+      if (a.status !== 'pending') return false;
+      if (a.action === 'colleague_request') return true;
+      if (a.action === 'team_invite') {
+        // If user is already in the team, hide the invite
+        const isAlreadyMember = teams.some(t => t.id === a.targetId && t.members.includes(currentUser?.id || ''));
+        return !isAlreadyMember;
+      }
+      return false;
+    }
   );
 
 
