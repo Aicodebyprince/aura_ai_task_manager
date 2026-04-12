@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🌌 Aura AI — Hybrid Intelligence Task Manager
+#  Aura AI — Hybrid Intelligence Task Manager
 
 ### *Where Human Intuition Meets Machine Precision*
 
