@@ -1,223 +1,613 @@
 <div align="center">
-
-#  Aura AI — Hybrid Intelligence Task Manager
-
-### *Where Human Intuition Meets Machine Precision*
-
-[![Next.js](https://img.shields.io/badge/Next.js-15.3-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
-[![Firebase](https://img.shields.io/badge/Firebase-10.x-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)](https://firebase.google.com/)
-[![Genkit](https://img.shields.io/badge/Genkit-1.14-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://firebase.google.com/docs/genkit)
-[![Gemini](https://img.shields.io/badge/Gemini-2.0_Flash-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://aistudio.google.com/)
-[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
-
-<br/>
-
-> **Aura AI** is a state-of-the-art, professional-grade task management ecosystem that eliminates the "coordination tax" of modern teamwork. It combines a deterministic scoring engine with Google Gemini's generative intelligence to automate triage, smart assignment, and daily planning — so your team can focus entirely on execution.
-
-<br/>
-
----
-
+  <br/>
+  <img src="https://raw.githubusercontent.com/Aicodebyprince/aura_ai_task_manager/main/public/logo.png" alt="Aura AI Logo" width="120"/>
+  <br/><br/>
+  <img src="https://img.shields.io/badge/status-production-10B981?style=for-the-badge&logo=vercel&logoColor=white" alt="Status"/>
+  <img src="https://img.shields.io/badge/next.js_15.3-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js"/>
+  <img src="https://img.shields.io/badge/Gemini_2.5_Flash-4285F4?style=for-the-badge&logo=googlegemini&logoColor=white" alt="Gemini"/>
+  <img src="https://img.shields.io/badge/Genkit_1.14-4285F4?style=for-the-badge&logo=google&logoColor=white" alt="Genkit"/>
+  <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" alt="Firebase"/>
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"/>
+  <img src="https://img.shields.io/badge/license-MIT-8B5CF6?style=for-the-badge" alt="License"/>
+  <br/>
+  <blockquote><strong>Live Demo:</strong> Not yet deployed. Run locally with <code>npm run dev</code> — see <a href="#-getting-started">Getting Started</a>.</blockquote>
 </div>
 
-## 📖 Table of Contents
+<br/>
 
-1. [✨ Features](#-features)
-2. [🧠 Hybrid Intelligence Architecture](#-hybrid-intelligence-architecture)
-3. [📐 Core Algorithms](#-core-algorithms)
-4. [🛠 Tech Stack](#-tech-stack)
-5. [🚀 Getting Started](#-getting-started)
-6. [⚙️ Environment Variables](#️-environment-variables)
-7. [📂 Project Structure](#-project-structure)
-8. [🤖 AI Flows (Genkit)](#-ai-flows-genkit)
-9. [🔒 Authentication & Security](#-authentication--security)
-10. [📊 Analytics & Performance](#-analytics--performance)
-11. [🗺 Roadmap](#-roadmap)
-12. [🤝 Contributing](#-contributing)
-13. [📄 License](#-license)
+<div align="center">
+  <h1>Aura AI Task Manager</h1>
+  <p align="center">
+    <strong>Hybrid-intelligence task management.</strong><br/>
+    Where deterministic algorithms meet generative AI to eliminate team coordination tax.
+  </p>
+  <br/>
+  <p align="center">
+    <a href="#-overview">Overview</a> •
+    <a href="#-screenshots">Screenshots</a> •
+    <a href="#-intelligence-model">Intelligence Model</a> •
+    <a href="#-features">Features</a> •
+    <a href="#-architecture">Architecture</a> •
+    <a href="#-scoring-algorithm">Scoring</a> •
+    <a href="#-tech-stack">Tech Stack</a> •
+    <a href="#-quick-start">Quick Start</a> •
+    <a href="#-getting-started">Setup</a> •
+    <a href="#-project-structure">Structure</a> •
+    <a href="#-roadmap">Roadmap</a>
+  </p>
+  <br/>
+  <p align="center">
+    <sub>
+      Built by <strong><a href="https://github.com/Aicodebyprince">WebTurnerAI</a></strong>
+      — practical AI systems for real operations.
+    </sub>
+  </p>
+  <br/>
+</div>
 
 ---
+
+<br/>
+
+## 📋 Overview
+
+Aura AI is a **professional-grade task management platform** purpose-built for teams that need more than just another Kanban board. It replaces the manual overhead of daily planning, task assignment, and status coordination with a **two-layer intelligence system** that combines the reliability of deterministic algorithms with the flexibility of generative AI.
+
+The problem it solves is simple but pervasive: **teams lose 30% or more of their productive time to coordination** — standups, spreadsheet reassignments, rescheduling, figuring out who should do what. Aura AI automates the mathematics of that coordination so humans can focus on the work that actually matters.
+
+<br/>
+
+### Who It's For
+
+| For | What It Solves |
+|-----|----------------|
+| **Product Teams** | Accelerate feature delivery with automated sprint planning and AI-assisted task distribution |
+| **Agencies & Project Managers** | Manage freelancer workloads, track live project ETAs, eliminate manual follow-ups |
+| **Students & Educators** | Organize group projects, schedule study sessions, track academic deadlines |
+
+<br/>
+
+### ⚡ Quick Start
+
+```bash
+git clone https://github.com/Aicodebyprince/aura_ai_task_manager.git
+cd aura_ai_task_manager
+npm install
+cp .env.example .env     # Add Firebase & Gemini keys
+npm run dev              # Open http://localhost:3000
+```
+
+---
+
+<br/>
+
+## 📸 Screenshots
+
+<div align="center">
+  <h3>Landing Page</h3>
+  <img src="https://raw.githubusercontent.com/Aicodebyprince/aura_ai_task_manager/main/public/Landing%20Page.png" alt="Landing Page" width="90%" style="border-radius: 8px; border: 1px solid #e5e7eb;"/>
+  <br/><br/>
+  
+  <h3>Dashboard View</h3>
+  <img src="https://raw.githubusercontent.com/Aicodebyprince/aura_ai_task_manager/main/public/Dashbaord.png" alt="Dashboard" width="90%" style="border-radius: 8px; border: 1px solid #e5e7eb;"/>
+  <br/><br/>
+  
+  <h3>Dashboard — Alternate View</h3>
+  <img src="https://raw.githubusercontent.com/Aicodebyprince/aura_ai_task_manager/main/public/Dashbaord1.png" alt="Dashboard Alternate" width="90%" style="border-radius: 8px; border: 1px solid #e5e7eb;"/>
+  <br/><br/>
+  
+  <h3>Analytics</h3>
+  <img src="https://raw.githubusercontent.com/Aicodebyprince/aura_ai_task_manager/main/public/Analytics.png" alt="Analytics" width="90%" style="border-radius: 8px; border: 1px solid #e5e7eb;"/>
+  <br/><br/>
+  
+  <h3>Team Groups</h3>
+  <img src="https://raw.githubusercontent.com/Aicodebyprince/aura_ai_task_manager/main/public/Groups.png" alt="Groups" width="90%" style="border-radius: 8px; border: 1px solid #e5e7eb;"/>
+  <br/><br/>
+  
+  <h3>Settings</h3>
+  <img src="https://raw.githubusercontent.com/Aicodebyprince/aura_ai_task_manager/main/public/Settings.png" alt="Settings" width="90%" style="border-radius: 8px; border: 1px solid #e5e7eb;"/>
+</div>
+
+<br/>
+
+*The dashboard features smooth Framer Motion transitions, dark/light theme support, and drag-and-drop task management via react-dnd.*
+
+---
+
+<br/>
+
+## 🧠 Intelligence Model
+
+Aura's core innovation is its **two-layer architecture** that separates deterministic computation from generative reasoning — ensuring that critical task operations are always precise while conversational interactions remain fluid and natural.
+
+<br/>
+
+### Layer 1 — Deterministic Engine
+
+The deterministic engine handles every operation that requires **objective, repeatable computation**. No hallucinations. No ambiguity. Just provably correct algorithms.
+
+| Component | Mechanism | Output |
+|-----------|-----------|--------|
+| **Priority Sorter** | Multi-factor priority scoring (deadline proximity, dependency count, business value) | Ranked task backlog |
+| **Daily Planner** | Knapsack heuristic optimizing for value density within an 8-hour window | Time-blocked schedule |
+| **Assignment Scorer** | 5-factor weighted evaluation across team members (30% availability, 20% skill match, 20% completion rate, 20% on-time rate, 10% efficiency) | Ranked assignee list with performance tags |
+
+```
+┌──────────────────────────────────────────────────────────┐
+│                   DETERMINISTIC ENGINE                    │
+│                                                          │
+│  Task In ──► Priority Sorter ──► Knapsack Planner        │
+│                │                        │                 │
+│                ▼                        ▼                 │
+│          Assignment Scorer ──► Ranked Output + Tags       │
+│                                                          │
+│  Properties: O(1) predictable, zero latency,             │
+│              mathematically verifiable, no hallucinations │
+└──────────────────────────────────────────────────────────┘
+```
+
+<br/>
+
+### Layer 2 — Generative AI
+
+The generative layer handles everything that requires **language understanding and generation**. Powered by **Google Gemini 2.5 Flash** and optionally **OpenAI GPT-4o-mini**, both orchestrated through **Firebase Genkit**.
+
+| Capability | Description |
+|------------|-------------|
+| **Conversational Agent** | Multi-turn dialogue for task creation, queries, and planning |
+| **Natural Language Parsing** | Extract structured tasks from unstructured input like "Create a task for design review due Friday" |
+| **Narrative Planning** | Generate human-readable day plans and summaries |
+| **Context Management** | Maintain conversation state across Genkit flows |
+
+```
+┌──────────────────────────────────────────────────────────┐
+│                   GENERATIVE AI LAYER                     │
+│                                                          │
+│  User Input ──► Genkit Flow ──► Gemini 2.5 Flash / GPT-4o│
+│                    │                    │                  │
+│                    ▼                    ▼                  │
+│             Structured Data ──► Context Store             │
+│                                                          │
+│  Properties: contextual, adaptive, multi-turn             │
+│              conversation support                         │
+└──────────────────────────────────────────────────────────┘
+```
+
+<br/>
+
+### How They Work Together
+
+```
+User: "Plan my day around the Q2 review prep and the client demo"
+
+                         │
+                         ▼
+┌────────────────────────────────────────────────────────────┐
+│                    GENKIT FLOW                              │
+│                                                             │
+│  1. Gemini parses intent → extracts tasks & deadlines       │
+│  2. Structured output → deterministic engine                │
+│  3. Engine computes optimal schedule (Knapsack)             │
+│  4. Gemini generates human-readable narrative day plan      │
+│  5. Result: mathematically optimal schedule + natural text  │
+└────────────────────────────────────────────────────────────┘
+                         │
+                         ▼
+          ┌──────────────────────────────────────┐
+          │  ☀️ Your Optimized Day                │
+          │                                      │
+          │  08:00 – 09:30 │ Q2 Review Prep      │
+          │  09:30 – 10:00 │ Buffer              │
+          │  10:00 – 11:30 │ Client Demo Prep    │
+          │  11:30 – 12:00 │ Client Demo         │
+          │  12:00 – 13:00 │ Lunch               │
+          │  13:00 – 14:30 │ Feedback Sync       │
+          │  14:30 – 16:00 │ Documentation       │
+          │  16:00 – 17:00 │ Open / Deep Work    │
+          └──────────────────────────────────────┘
+```
+
+> The deterministic engine ensures the schedule is **mathematically optimal**. The AI ensures it's **communicated naturally**.
+
+---
+
+<br/>
 
 ## ✨ Features
 
-### 🎯 Dashboard & Task Management
-| Feature | Description |
-|---|---|
-| **Bento-Grid Dashboard** | A visual command center with live task KPIs, priority queues, and team velocity — all in a premium glassmorphism layout |
-| **Kanban-Style Board** | Drag-and-drop tasks across `Inbox → In Progress → Review → Done` with real-time Firestore sync |
-| **Task Timer** | Built-in stopwatch on every task card to track `timeSpent` vs `estimatedTime` for efficiency scoring |
-| **Priority Queue** | AI-surfaced "Next Action" — automatically tells you the single most important thing to do right now |
-| **Due Date Alerts** | Overdue and approaching-deadline tasks are automatically flagged in the dashboard and in the AI planner |
+### 🧠 AI Daily Planner
+Generates an optimized 8-hour work schedule using a **Knapsack-based heuristic** that maximizes value density. Automatically respects task dependencies, time estimates, and deadlines — rebalancing as priorities shift throughout the day.
 
-### 🤖 AI Assistant ("Aura")
-| Feature | Description |
-|---|---|
-| **Plan My Day** | Generates a structured 8-hour time-boxed schedule based on your live task list using the Knapsack heuristic |
-| **Natural Language Task Creation** | Say "Create a task to finish the report by Friday, high priority" — the AI calls `createTask` and it appears instantly on your board |
-| **Progress Summarization** | Ask "How many tasks are in progress?" and get an accurate, context-aware answer drawn from live Firestore data |
-| **Task Prioritization** | Ask "What should I focus on?" to get the AI's top picks both as a narrative _and_ as highlighted task cards |
-| **Team Q&A** | "Who is on the Marketing team?" — Aura cross-references group membership and user profiles to answer precisely |
+### 🎯 Smart Task Assignment
+A **5-factor weighted scoring model** evaluates every team member against each incoming task. Returns the **top 3 candidates** with human-readable justification tags (e.g., "Highly Available", "Strong Skill Match", "Consistent On-Time Delivery"). Full formula disclosed in the [Scoring Algorithm](#-scoring-algorithm) section.
 
-### 👥 Team & Group Intelligence
-| Feature | Description |
-|---|---|
-| **AI Auto-Assign** | Project managers click one button; the algorithm scores all team members and surfaces the top 3 candidates with match reasons |
-| **Group Workspaces** | Dedicated collaborative spaces per team, with isolated task lists and shared analytics |
-| **Bulk AI Task Generation** | Generate an entire sprint's worth of tasks for a project description in seconds |
-| **Real-Time Activity Feed** | Every task update, team invite, and status change is broadcast live via Firestore listeners |
-| **Invitation Flow** | Secure, notification-driven member invitation system with `team_invite` activity entries |
+### 💬 Aura Conversational Assistant
+A natural language interface that understands commands like:
+- *"Create a task for design review due Friday"*
+- *"Who's the best person to handle the API integration?"*
+- *"What does my week look like?"*
+- *"Reschedule the standup to 10 AM"*
 
-### 📈 Analytics & Insights
-| Feature | Description |
-|---|---|
-| **Velocity Charts** | Recharts-powered time-series visualization of team throughput and individual output |
-| **Completion Rate Tracking** | Per-user ratio of assigned → completed tasks, updated in real-time |
-| **Efficiency Score** | Ratio of estimated vs. actual (timed) hours spent per task |
-| **On-Time Rate** | Tracks whether tasks are completed before or after their due dates |
+Powers: task creation, status updates, queries, schedule generation, team member lookup — all via natural conversation.
+
+### 📊 Real-Time Bento-Grid Dashboard
+A dynamic, responsive dashboard layout featuring:
+- **Kanban Board** with drag-and-drop task transitions (react-dnd)
+- **Task Timers** with start/stop for granular time tracking
+- **Team Velocity Analytics** via Recharts
+- **Progress Tracking** with completion metrics
+- **Live Sync** across all sessions via Firebase Firestore `onSnapshot` subscribers
+
+<div align="center">
+  <br/>
+  <img src="https://raw.githubusercontent.com/Aicodebyprince/aura_ai_task_manager/main/public/Dashbaord.png" alt="Dashboard Preview" width="85%" style="border-radius: 8px; border: 1px solid #e5e7eb;"/>
+  <br/><br/>
+</div>
+
+### 👥 Team Management & Analytics
+Full team and colleague management with:
+- **Skill profiles** for accurate task matching
+- **Workload visualization** for capacity planning
+- **Performance scoring** — completion rate, on-time rate, efficiency
+- **Group analytics** for team-level velocity and throughput insights
+
+<div align="center">
+  <br/>
+  <img src="https://raw.githubusercontent.com/Aicodebyprince/aura_ai_task_manager/main/public/Groups.png" alt="Groups Preview" width="85%" style="border-radius: 8px; border: 1px solid #e5e7eb;"/>
+  <br/><br/>
+  <img src="https://raw.githubusercontent.com/Aicodebyprince/aura_ai_task_manager/main/public/Analytics.png" alt="Analytics Preview" width="85%" style="border-radius: 8px; border: 1px solid #e5e7eb;"/>
+</div>
+
+<br/>
+
+### 📅 Calendar View
+Long-range planning with deadline visualization and workload distribution across weeks and months.
+
+### 🎨 Full Theme Support
+Dark and light modes with smooth Framer Motion transitions. System preference detection with manual override toggle.
 
 ---
 
-## 🧠 Hybrid Intelligence Architecture
+<br/>
 
-Aura AI is built on a **two-layer intelligence model** that combines the strengths of deterministic algorithms and stochastic AI:
+## 🏗️ Architecture
 
 ```
-┌─────────────────────────────────────────────────────┐
-│                  AURA AI PLATFORM                   │
-│                                                     │
-│  ┌───────────────────┐    ┌───────────────────────┐ │
-│  │   LAYER 1:        │    │   LAYER 2:            │ │
-│  │   Deterministic   │    │   Generative AI       │ │
-│  │   Engine          │    │   (Google Gemini)     │ │
-│  │                   │    │                       │ │
-│  │  • Assignment     │    │  • Conversational     │ │
-│  │    Scoring        │◄──►│    Agent (Aura)       │ │
-│  │  • Day Planning   │    │  • Task Creation      │ │
-│  │    (Knapsack)     │    │  • NLP Q&A            │ │
-│  │  • Priority Sort  │    │  • Day Plan Narrative │ │
-│  └───────────────────┘    └───────────────────────┘ │
-│                   ▲               ▲                 │
-│                   └───────┬───────┘                 │
-│                           │                         │
-│              ┌────────────▼──────────┐              │
-│              │   Firebase Firestore  │              │
-│              │  (Single Source of    │              │
-│              │       Truth)          │              │
-│              └───────────────────────┘              │
-└─────────────────────────────────────────────────────┘
+┌────────────────────────────────────────────────────────────────────────────────┐
+│                              CLIENT (Next.js 15)                               │
+│                                                                                │
+│  ┌──────────────┐   ┌──────────────┐   ┌──────────────┐   ┌──────────────┐    │
+│  │   Landing    │   │    Auth      │   │  Dashboard   │   │   Settings   │    │
+│  │   Page       │   │    Page      │   │  (Main SPA)  │   │              │    │
+│  └──────┬───────┘   └──────┬───────┘   └──────┬───────┘   └──────┬───────┘    │
+│         │                  │                  │                  │            │
+│         └──────────────────┴──────────────────┴──────────────────┘            │
+│                                    │                                         │
+│  ┌─────────────────────────────────┼──────────────────────────────────────┐  │
+│  │         React Context Layer      │                                      │  │
+│  │                                   │                                      │  │
+│  │  ┌──────────┐  ┌───────────┐  ┌──┴──────┐  ┌──────────┐  ┌────────┐  │  │
+│  │  │useTimer  │  │ useToast  │  │ AppCtxt │  │useMobile│  │ReactDnD │  │  │
+│  │  └──────────┘  └───────────┘  └─────────┘  └──────────┘  └────────┘  │  │
+│  │    (time-tracking)            (global state)            (drag/drop)  │  │
+│  └─────────────────────────────────┬──────────────────────────────────────┘  │
+└────────────────────────────────────┼──────────────────────────────────────────┘
+                                     │
+                                     ▼
+┌────────────────────────────────────────────────────────────────────────────────┐
+│                        FIREBASE FIRESTORE (Real-Time NoSQL)                    │
+│                                                                                │
+│  Collections: tasks, users, teams, groups, analytics, settings                │
+│  Auth: Firebase Authentication (email/password)                               │
+│  Real-time: onSnapshot listeners → live multi-session sync                   │
+└────────────────────────────────────────────────────────────────────────────────┘
+                                     │
+                                     ▼
+┌────────────────────────────────────────────────────────────────────────────────┐
+│                         GENKIT ORCHESTRATION LAYER                             │
+│                                                                                │
+│  ┌────────────────────────────────────────────────────────────────────────┐   │
+│  │                       DETERMINISTIC ENGINE                               │   │
+│  │                                                                         │   │
+│  │  src/lib/assignment-algorithm.ts                                        │   │
+│  │  ┌──────────────────┐  ┌──────────────────┐  ┌──────────────────────┐  │   │
+│  │  │ Priority Sorter  │  │ Knapsack Planner │  │ Assignment Scorer    │  │   │
+│  │  │ deadline + deps  │  │ value density    │  │ 5-factor weighting   │  │   │
+│  │  └──────────────────┘  └──────────────────┘  └──────────────────────┘  │   │
+│  └────────────────────────────────────────────────────────────────────────┘   │
+│                                                                                │
+│  ┌────────────────────────────────────────────────────────────────────────┐   │
+│  │                       GENERATIVE AI                                      │   │
+│  │                                                                         │   │
+│  │  src/ai/genkit.ts  ──  src/ai/flows/conversational-agent-flow.ts        │   │
+│  │                                                                         │   │
+│  │  ┌──────────────────┐  ┌──────────────────┐  ┌──────────────────────┐  │   │
+│  │  │ Genkit Init      │  │ Conversational   │  │ AI Providers         │  │   │
+│  │  │ googleAI plugin  │  │ Agent Flow       │  │ ├── Gemini 2.5 Flash │  │   │
+│  │  │ default model    │  │ multi-turn       │  │ └── GPT-4o-mini      │  │   │
+│  │  └──────────────────┘  └──────────────────┘  └──────────────────────┘  │   │
+│  └────────────────────────────────────────────────────────────────────────┘   │
+└────────────────────────────────────────────────────────────────────────────────┘
 ```
 
-**Layer 1 (Deterministic)** is fast, predictable, and auditable. It handles objective scoring and scheduling.
-
-**Layer 2 (Generative)** handles language understanding, narrative generation, and flexible reasoning over context.
-
-Together, they eliminate the two biggest failure modes of AI-only tools: **hallucination** (countered by deterministic data) and **rigidity** (countered by LLM reasoning).
-
 ---
 
-## 📐 Core Algorithms
+<br/>
 
-### Algorithm 1: AI Daily Planner (The Knapsack Approach)
+## 📐 Scoring Algorithm (Deep Dive)
 
-**Goal:** Automatically structure a productive 8-hour workday from any task list.
+The `assignment-algorithm.ts` implements a deterministic multi-factor scoring system that evaluates team members for optimal task assignment.
 
-**Trigger:** User says "Plan my day" to the Aura assistant.
-
-**Steps:**
-1. **Overdue Priority Check** — Any task past its `dueDate` is automatically elevated to the top of the queue, regardless of its assigned priority.
-2. **Priority Sort** — Remaining tasks are sorted: `High > Medium > Low`.
-3. **Time-Boxing** — The algorithm iterates through sorted tasks, allocating time blocks matching each task's `estimatedTime` until 8 hours are filled.
-4. **Gap Filling** — If a large task won't fit in remaining time, the algorithm skips it and looks for smaller tasks to fill the gap. Remaining time is marked `"Open for other tasks"`.
+### Weight Distribution
 
 ```
-Knapsack Pseudo-logic:
-  capacity = 8 hours
-  schedule = []
-  for task in sorted(tasks, key=priority_then_overdue):
-    if task.estimatedTime <= capacity:
-      schedule.append(task)
-      capacity -= task.estimatedTime
-  return schedule
+┌─────────────────────────────────────────────────────────────┐
+│                   SCORE WEIGHTING BREAKDOWN                  │
+│                                                             │
+│  Availability     ████████████████████████████████   30%    │
+│  Skill Match      ██████████████████████████         20%    │
+│  Completion Rate  ██████████████████████████         20%    │
+│  On-Time Rate     ██████████████████████████         20%    │
+│  Efficiency       ██████████████                     10%    │
+└─────────────────────────────────────────────────────────────┘
 ```
 
-**Output:** A structured `dayPlan[]` array rendered in the chat as a human-readable timetable, starting at 9:00 AM.
+### Formula
+
+```
+Final Score = (Availability × 0.30)
+            + (Skill × 0.20)
+            + (CompletionRate × 0.20)
+            + (OnTimeRate × 0.20)
+            + (Efficiency × 0.10)
+```
+
+### Metric Definitions
+
+| Metric | Calculation Details | Range | Default |
+|--------|-------------------|-------|---------|
+| **Availability** | `100 - (workload × 5)` where workload = sum of estimated hours on incomplete tasks | 0–100 | — |
+| **Skill Match** | Match task keywords against user skills; `+20` per match | 0–100 (cap) | — |
+| **Completion Rate** | `(completedTasks / totalTasks) × 100` | 0–100 | 80 (new members) |
+| **On-Time Rate** | `(onTimeTasks / completedTasks) × 100` | 0–100 | 80 (new members) |
+| **Efficiency** | `((ratio − 0.5) / 1) × 100` where `ratio = estimatedTime / actualTime` | 0–100 (normalized) | — |
+
+### Performance Tags
+
+The algorithm generates human-readable tags based on score thresholds, providing immediate context for assignment decisions:
+
+| Threshold Condition | Tag Generated |
+|---------------------|---------------|
+| Availability > 80 | `"Highly Available"` |
+| Skill Match > 80 | `"Strong Skill Match"` |
+| Completion Rate > 90 | `"High Completion Rate"` |
+| On-Time Rate > 90 | `"Consistent On-Time Delivery"` |
+| Efficiency > 80 | `"Highly Efficient"` |
+| No high thresholds met | `"Good Overall Candidate"` (default) |
+
+### Output: Top 3 Candidates
+
+The algorithm returns the **top 3 ranked team members** with their scores and tags, enabling PMs to make informed assignment decisions at a glance.
 
 ---
 
-### Algorithm 2: AI Task Assignment Scorer
+<br/>
 
-**Goal:** Identify the top 3 best-fit team members for any incoming task.
+## 🛠️ Tech Stack
 
-**Trigger:** Project Manager clicks "AI Auto Assign" on a task card.
+### Core Framework
 
-**Formula:**
+| Technology | Version | Purpose |
+|------------|---------|---------|
+| [Next.js](https://nextjs.org/) | 15.3.8 | React framework with App Router & Turbopack |
+| [React](https://react.dev/) | 18.3.1 | UI component library |
+| [TypeScript](https://www.typescriptlang.org/) | 5.x | Type-safe development |
 
-$$Score = (A \times 0.30) + (S \times 0.20) + (C \times 0.20) + (T \times 0.20) + (E \times 0.10)$$
+### AI & Machine Learning
 
-| Factor | Weight | Description |
-|---|---|---|
-| **A** — Availability | 30% | Remaining capacity after summing `estimatedTime` of active tasks. Full capacity = 1.0 |
-| **S** — Skill Match | 20% | Keyword overlap between task `title`/`description` and user `skills[]` array |
-| **C** — Completion Rate | 20% | `doneTasks / totalAssignedTasks` — historical track record |
-| **T** — On-Time Rate | 20% | `onTimeTasks / completedTasks` — deadline reliability |
-| **E** — Efficiency | 10% | `estimatedTime / actualTimeSpent` — how fast vs. expected |
+| Technology | Version | Purpose |
+|------------|---------|---------|
+| [Google Gemini 2.5 Flash](https://deepmind.google/technologies/gemini/flash/) | — | Primary generative AI model |
+| [OpenAI GPT-4o-mini](https://platform.openai.com/) | — | Secondary AI provider (via genkitx-openai) |
+| [Firebase Genkit](https://firebase.google.com/docs/genkit) | 1.14.1 | AI orchestration, flow management, tool calling |
+| [Genkit Google AI Plugin](https://github.com/googleapis/genkit/tree/main/genkit-tools/googleai) | 1.14.1 | Gemini integration for Genkit |
 
-**Output:** Top 3 candidates ranked by score, each accompanied by human-readable "Match Reasons" (e.g., `"Highly Available"`, `"Skills Match: React, Firebase"`).
+### Backend & Database
+
+| Technology | Version | Purpose |
+|------------|---------|---------|
+| [Firebase](https://firebase.google.com/) | 10.12.2 | Authentication & real-time database |
+| [Firestore](https://firebase.google.com/docs/firestore) | — | Real-time NoSQL document database with `onSnapshot` listeners |
+| [Firebase Auth](https://firebase.google.com/docs/auth) | — | User authentication (email/password) |
+
+### UI & Styling
+
+| Technology | Purpose |
+|------------|---------|
+| [Tailwind CSS](https://tailwindcss.com/) | Utility-first styling |
+| [Radix UI](https://www.radix-ui.com/) | 16+ accessible component primitives |
+| [Framer Motion](https://www.framer.com/motion/) | Animation library |
+| [Recharts](https://recharts.org/) | Data visualization (team velocity, analytics) |
+| [Lucide React](https://lucide.dev/) | Icon library |
+| [Embla Carousel](https://www.embla-carousel.com/) | Carousel/slider |
+| [cmdk](https://cmdk.paco.me/) | Command palette / search |
+| [class-variance-authority](https://cva.style/) | Component variant management |
+| [tailwind-merge](https://github.com/dcastil/tailwind-merge) | Tailwind class conflict resolution |
+| [tailwindcss-animate](https://github.com/jamiebuilds/tailwindcss-animate) | Tailwind animation utilities |
+
+### Form & Validation
+
+| Technology | Purpose |
+|------------|---------|
+| [React Hook Form](https://react-hook-form.com/) | Performant form state management |
+| [Zod](https://zod.dev/) | Runtime schema validation |
+| [Hookform Resolvers](https://github.com/react-hook-form/resolvers) | Zod integration bridge |
+
+### Drag & Drop & Date Handling
+
+| Technology | Purpose |
+|------------|---------|
+| [React DnD](https://react-dnd.github.io/react-dnd/) | Drag-and-drop task Kanban management |
+| [React DnD HTML5 Backend](https://react-dnd.github.io/react-dnd/docs/backends/html5) | Browser-native drag support |
+| [date-fns](https://date-fns.org/) | Date utility library |
+| [React Day Picker](https://react-day-picker.js.org/) | Date picker component |
+
+### Development Tooling
+
+| Tool | Purpose |
+|------|---------|
+| [Turbopack](https://turbo.build/pack) | Incremental development bundler |
+| [Genkit CLI](https://firebase.google.com/docs/genkit) | Local AI flow development, testing & debugging |
+| [Genkit Dev](https://firebase.google.com/docs/genkit/dev) | Dev server for Genkit flows with watch mode |
+| [dotenv-cli](https://github.com/entropitor/dotenv-cli) | Environment variable loading |
+| [ESLint](https://eslint.org/) | Code linting (via `next lint`) |
+| [PostCSS](https://postcss.org/) | CSS processing |
 
 ---
 
-## 🛠 Tech Stack
+<br/>
 
-| Category | Technology | Purpose |
-|---|---|---|
-| **Framework** | Next.js 15 (App Router) | Full-stack React framework with Server Actions |
-| **Language** | TypeScript 5 | Type-safe development across frontend and backend |
-| **Styling** | Tailwind CSS 3 | Utility-first CSS with custom glassmorphism design system |
-| **Animations** | Framer Motion 11 | Page transitions, micro-interactions, staggered list animations |
-| **AI Runtime** | Firebase Genkit 1.14 | Flow orchestration, tool definitions, prompt management |
-| **AI Model** | Google Gemini 2.0 Flash | Generative intelligence for the conversational agent — fast, cost-effective, with full function calling and tool use support |
-| **Database** | Firebase Firestore | Real-time NoSQL database with live listeners |
-| **Auth** | Firebase Authentication | Email/password auth with session management |
-| **Analytics** | Firebase Analytics | User event tracking |
-| **Charts** | Recharts 2 | Velocity, completion, and efficiency visualizations |
-| **Drag & Drop** | React DnD 16 | Kanban board drag-and-drop interactions |
-| **Forms** | React Hook Form + Zod | Performant, type-safe form validation |
-| **UI Primitives** | Radix UI | Accessible, unstyled UI components (dialogs, dropdowns, etc.) |
+## 📁 Project Structure
+
+```
+aura_ai_task_manager/
+│
+├── src/
+│   ├── ai/                                    # AI layer — Genkit configuration & flows
+│   │   ├── genkit.ts                          #   Genkit init with Google AI plugin
+│   │   ├── dev.ts                             #   Genkit development entry point
+│   │   ├── flows/
+│   │   │   └── conversational-agent-flow.ts   #   Multi-turn dialogue flow
+│   │   └── schemas/
+│   │       └── index.ts                       #   Zod schemas for AI I/O
+│   │
+│   ├── app/                                   # Next.js 15 App Router
+│   │   ├── layout.tsx                         #   Root layout with metadata & providers
+│   │   ├── page.tsx                           #   Landing page route
+│   │   ├── dashboard/
+│   │   │   └── page.tsx                       #   Authenticated dashboard
+│   │   ├── globals.css                        #   Global styles & Tailwind base
+│   │   └── icon.png                           #   Favicon / app icon
+│   │
+│   ├── components/                            # React components
+│   │   ├── ui/                                #   Shared UI primitives (Radix-based, shadcn-style)
+│   │   │   ├── accordion.tsx                  #   Collapsible sections
+│   │   │   ├── alert-dialog.tsx               #   Confirmation modals
+│   │   │   ├── avatar.tsx                     #   User avatars with fallback
+│   │   │   ├── badge.tsx                      #   Status/label badges
+│   │   │   ├── button.tsx                     #   Button component with variants
+│   │   │   ├── calendar.tsx                   #   Calendar widget
+│   │   │   ├── card.tsx                       #   Card containers
+│   │   │   ├── checkbox.tsx                   #   Checkbox input
+│   │   │   ├── collapsible.tsx                #   Collapsible panels
+│   │   │   ├── dialog.tsx                     #   Modal dialogs
+│   │   │   ├── dropdown-menu.tsx              #   Context menus
+│   │   │   ├── input.tsx                      #   Text input
+│   │   │   ├── label.tsx                      #   Form labels
+│   │   │   ├── menubar.tsx                    #   Menu bar
+│   │   │   ├── popover.tsx                    #   Popover overlays
+│   │   │   ├── progress.tsx                   #   Progress bars
+│   │   │   ├── radio-group.tsx                #   Radio button group
+│   │   │   ├── scroll-area.tsx                #   Custom scroll containers
+│   │   │   ├── select.tsx                     #   Select dropdowns
+│   │   │   ├── separator.tsx                  #   Visual dividers
+│   │   │   ├── slider.tsx                     #   Range slider
+│   │   │   ├── switch.tsx                     #   Toggle switch
+│   │   │   ├── tabs.tsx                       #   Tab navigation
+│   │   │   ├── toast.tsx                      #   Toast notifications
+│   │   │   ├── toaster.tsx                    #   Toast container
+│   │   │   └── tooltip.tsx                    #   Tooltip hints
+│   │   │
+│   │   ├── landing-page.tsx                   #   Marketing landing with bento-grid showcase
+│   │   ├── enhanced-dashboard.tsx             #   Core dashboard bento-grid layout
+│   │   ├── analytics.tsx                      #   Recharts analytics & visualizations
+│   │   ├── colleagues.tsx                     #   Colleague list & profiles
+│   │   ├── groups.tsx                         #   Group/team workspace UI
+│   │   ├── settings.tsx                       #   User preferences & configuration
+│   │   └── calendar.tsx                       #   Calendar-based scheduling view
+│   │
+│   ├── context/
+│   │   └── app-context.tsx                    #   Global state (tasks, users, teams, auth)
+│   │
+│   ├── hooks/
+│   │   └── use-toast.ts                       #   Toast notification management
+│   │
+│   └── lib/
+│       ├── assignment-algorithm.ts            #   Deterministic 5-factor scoring engine
+│       ├── firebase.ts                        #   Firebase client initialization
+│       └── utils.ts                           #   Shared utility functions
+│
+├── docs/
+│   └── algorithm.md                           #   Deep-dive into scoring algorithm
+│
+├── public/                                    # Static assets (images, icons)
+│   ├── logo.png                               #   Aura AI logo
+│   ├── Dashboard.png                          #   Dashboard screenshot
+│   ├── Dashboard1.png                         #   Dashboard alternate view
+│   ├── Landing Page.png                       #   Landing page screenshot
+│   ├── Analytics.png                          #   Analytics dashboard screenshot
+│   ├── Groups.png                             #   Team groups screenshot
+│   ├── Settings.png                           #   Settings page screenshot
+│   └── ...                                    #   Additional images
+│
+├── package.json                               # Dependencies, scripts, metadata
+├── tsconfig.json                              # TypeScript compiler configuration
+├── tailwind.config.ts                         # Tailwind CSS configuration
+├── next.config.ts                             # Next.js configuration
+├── postcss.config.js                          # PostCSS configuration
+├── .env.example                               # Environment variable template
+├── .gitignore                                 # Git ignore rules
+└── README.md                                  # This file
+```
 
 ---
+
+<br/>
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 
-- **Node.js** v18 or higher
-- **npm** v9 or higher
-- A **Google AI Studio** API key ([Get one free](https://aistudio.google.com/app/apikey))
-- A **Firebase** project ([Create one](https://console.firebase.google.com/))
+| Requirement | Version | How to Get |
+|-------------|---------|-----------|
+| **Node.js** | 20+ | [nodejs.org](https://nodejs.org/) |
+| **npm** or **yarn** | Latest | Included with Node.js |
+| **Firebase Project** | Active account | [Firebase Console](https://console.firebase.google.com/) — enable Firestore & Auth |
+| **Google Gemini API Key** | Active key | [Google AI Studio](https://aistudio.google.com/) |
 
-### 1. Clone the Repository
+### Firebase Setup
+
+1. Go to [Firebase Console](https://console.firebase.google.com/)
+2. Create a new project (or use existing)
+3. Enable **Firestore Database** (start in test mode)
+4. Enable **Authentication** → Sign-in method → Email/Password
+5. Register a **Web app** → Copy the Firebase config values
+
+### Installation
 
 ```bash
-git clone https://github.com/Aicodebyprince/Aura-AI-Task-Manager.git
-cd Aura-AI-Task-Manager
-```
+# Clone the repository
+git clone https://github.com/Aicodebyprince/aura_ai_task_manager.git
+cd aura_ai_task_manager
 
-### 2. Install Dependencies
-
-```bash
+# Install all dependencies
 npm install
 ```
 
-### 3. Configure Environment Variables
+### Environment Configuration
 
-Create a `.env` file in the project root (copy the template below):
+```bash
+# Create environment file from template
+cp .env.example .env
+```
+
+Open `.env` and configure:
 
 ```env
-# Google Gemini API (Required for AI features)
+# ─── Google Gemini API (Required for AI features) ─────────────
 GEMINI_API_KEY=your_gemini_api_key_here
 
-# Firebase Configuration (Required for database & auth)
+# ─── Firebase Configuration (Required for database & auth) ────
 NEXT_PUBLIC_FIREBASE_API_KEY=your_firebase_api_key
 NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
 NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_project_id
@@ -226,201 +616,131 @@ NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
 NEXT_PUBLIC_FIREBASE_APP_ID=your_app_id
 ```
 
-### 4. Set Up Firebase
-
-1. Enable **Firestore Database** in your Firebase console (start in test mode for development)
-2. Enable **Authentication** → Email/Password sign-in provider
-3. (Optional) Enable **Firebase Analytics**
-
-### 5. Run the Development Server
+### Development
 
 ```bash
+# Terminal 1: Start Next.js dev server (with Turbopack for fast refresh)
 npm run dev
+# Opens at http://localhost:3000
+
+# Terminal 2 (optional): Start Genkit for AI flow development
+npm run genkit:dev
+# Opens Genkit developer UI at http://localhost:4000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser. 🎉
-
-### 6. (Optional) Run the Genkit Development UI
-
-To inspect and test AI flows interactively:
+### Production Build
 
 ```bash
-npm run genkit:dev
-```
-
-Open [http://localhost:4000](http://localhost:4000) to access the Genkit Developer UI.
-
----
-
-## ⚙️ Environment Variables
-
-| Variable | Required | Description |
-|---|---|---|
-| `GEMINI_API_KEY` | ✅ Yes | Google Gemini API key (get free at [aistudio.google.com](https://aistudio.google.com/app/apikey)) |
-| `NEXT_PUBLIC_FIREBASE_API_KEY` | ✅ Yes | Firebase project API key |
-| `NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN` | ✅ Yes | Firebase Auth domain |
-| `NEXT_PUBLIC_FIREBASE_PROJECT_ID` | ✅ Yes | Firestore project ID |
-| `NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET` | ✅ Yes | Firebase Storage bucket |
-| `NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID` | ✅ Yes | FCM Sender ID |
-| `NEXT_PUBLIC_FIREBASE_APP_ID` | ✅ Yes | Firebase App ID |
-
-> **Security note:** Never commit your `.env` file. It is already listed in `.gitignore`.
-
----
-
-## 📂 Project Structure
-
-```
-Aura-AI-Task-Manager/
-├── src/
-│   ├── ai/
-│   │   ├── genkit.ts                   # Genkit + Gemini 2.0 Flash initialization
-│   │   ├── flows/
-│   │   │   └── conversational-agent-flow.ts  # Main Aura AI chat flow
-│   │   └── schemas/
-│   │       └── conversational-agent-schema.ts # Zod I/O schemas for AI flows
-│   ├── app/
-│   │   ├── layout.tsx                  # Root layout + global providers
-│   │   ├── page.tsx                    # Landing / Auth page
-│   │   └── dashboard/
-│   │       └── page.tsx                # Main authenticated dashboard
-│   ├── components/
-│   │   ├── enhanced-dashboard.tsx      # Core dashboard bento-grid layout
-│   │   ├── analytics.tsx               # Performance charts (Recharts)
-│   │   ├── colleagues.tsx              # Colleague management UI
-│   │   ├── groups.tsx                  # Group/team workspace UI
-│   │   ├── settings.tsx                # User settings panel
-│   │   └── calendar.tsx                # Calendar view
-│   ├── context/
-│   │   └── app-context.tsx             # Global state (tasks, users, teams)
-│   ├── lib/
-│   │   ├── assignment-algorithm.ts     # Deterministic AI Auto-Assign scorer
-│   │   ├── firebase.ts                 # Firestore & Auth client initialization
-│   │   └── utils.ts                    # Shared utilities
-│   └── hooks/
-│       └── use-toast.ts                # Toast notification hook
-├── docs/
-│   └── Algorithm.md                    # Deep-dive algorithm documentation
-├── public/                             # Static assets
-├── .env                                # Environment variables (gitignored)
-├── next.config.ts                      # Next.js configuration
-├── tailwind.config.ts                  # Tailwind + custom design tokens
-└── package.json
+# TypeScript check
+npm run typecheck
+# Lint
+npm run lint
+# Production build
+npm run build
+# Start production server
+npm run start
 ```
 
 ---
 
-## 🤖 AI Flows (Genkit)
+<br/>
 
-Aura AI uses **Firebase Genkit** to define, run, and monitor AI flows. All flows are implemented as **Next.js Server Actions** (`'use server'`).
+## 📜 Available Scripts
 
-### `conversationalAgentFlow`
-
-**File:** `src/ai/flows/conversational-agent-flow.ts`
-
-This is the central AI brain. It receives the user's chat message plus the full context (tasks, teams, users) from Firestore, and produces a structured response.
-
-**Tools available to the model:**
-- `createTask` — Creates a new task object which is then saved to Firestore by the client
-
-**Output Schema (`ConversationalAgentOutput`):**
-```typescript
-{
-  response: string;          // Narrative text response to display in chat
-  createdTask?: Task;        // Populated when user asks to create a task
-  prioritizedTasks?: string[]; // Task IDs when user asks for prioritization
-  dayPlan?: DayPlanItem[];   // Structured schedule when user says "Plan my day"
-}
-```
-
-**Model:** `googleai/gemini-2.0-flash`
-- Fast response times (<2s typical)
-- Strong instruction following for structured JSON output
-- Full tool use (function calling) support — powers the `createTask` tool
+| Script | Command | Purpose |
+|--------|---------|---------|
+| `dev` | `next dev --turbopack` | Development server with Turbopack HMR |
+| `build` | `next build` | Production build |
+| `start` | `next start` | Production server |
+| `lint` | `next lint` | Run ESLint |
+| `typecheck` | `tsc --noEmit` | TypeScript type checking |
+| `genkit:dev` | `genkit start -- tsx src/ai/dev.ts` | Genkit flow development server |
+| `genkit:watch` | `genkit start -- tsx --watch src/ai/dev.ts` | Genkit with file watching |
 
 ---
 
-## 🔒 Authentication & Security
-
-- **Firebase Authentication** handles all user identity management (email/password)
-- **Firestore Security Rules** should be configured to restrict read/write to authenticated users only
-- **API Keys** are server-side only — `GEMINI_API_KEY` is never exposed to the browser
-- **Server Actions** (`'use server'`) ensure AI flow invocations happen exclusively on the server
-
-### Recommended Firestore Rules (Production)
-
-```javascript
-rules_version = '2';
-service cloud.firestore {
-  match /databases/{database}/documents {
-    match /users/{userId} {
-      allow read, write: if request.auth != null && request.auth.uid == userId;
-    }
-    match /tasks/{taskId} {
-      allow read, write: if request.auth != null;
-    }
-    match /teams/{teamId} {
-      allow read, write: if request.auth != null;
-    }
-  }
-}
-```
-
----
-
-## 📊 Analytics & Performance
-
-| Metric | Implementation |
-|---|---|
-| Task Completion Rate | `done_count / total_assigned` per user per period |
-| Team Velocity | Count of tasks moved to `done` per day/week (Recharts AreaChart) |
-| Efficiency Score | `estimatedTime / actualTimeSpent` (tracked by in-app timer) |
-| On-Time Rate | `onTimeTasks / completedTasks` based on `dueDate` vs completion time |
-| Workload Distribution | Per-member task count and estimated hours (bar chart) |
-
----
-
-## 🗺 Roadmap
-
-- [x] Bento-grid premium dashboard
-- [x] AI conversational agent (Aura)
-- [x] AI Daily Planner (Plan my day)
-- [x] AI Auto-Assign with scoring algorithm
-- [x] Real-time Firestore sync
-- [x] Group workspaces & team management
-- [x] Activity feed & notifications
-- [x] Performance analytics (Recharts)
-- [x] Task timer & efficiency tracking
-- [ ] **Mobile App** (React Native / Expo)
-- [ ] **Calendar Integrations** (Google Calendar, Outlook)
-- [ ] **Slack / Discord Notifications**
-- [ ] **Document Summarization** (upload PDF → AI summary → tasks)
-- [ ] **Multi-model Support** (choose between Gemini, GPT-4, Claude)
-- [ ] **Time Tracking Reports** (exportable PDF/CSV)
-- [ ] **Webhook API** for third-party integrations
-
----
+<br/>
 
 ## 🤝 Contributing
 
-Contributions are welcome and appreciated! Here's how to get involved:
+Contributions are welcome! This is an active project, and improvements, bug fixes, and feature suggestions are appreciated.
 
-1. **Fork** the repository
-2. **Create** a feature branch: `git checkout -b feature/your-feature-name`
-3. **Commit** your changes: `git commit -m 'feat: add your feature'`
-4. **Push** to the branch: `git push origin feature/your-feature-name`
-5. **Open a Pull Request** with a clear description of your changes
+```bash
+# Fork the repository
+# Create a feature branch
+git checkout -b feat/your-feature
 
-### Commit Convention
+# Make changes, then run checks
+npm run typecheck
+npm run lint
 
-This project follows [Conventional Commits](https://www.conventionalcommits.org/):
-- `feat:` — New feature
-- `fix:` — Bug fix
-- `docs:` — Documentation changes
-- `refactor:` — Code refactoring
-- `chore:` — Maintenance tasks
+# Commit and push
+git commit -m "feat: add your feature"
+git push origin feat/your-feature
+
+# Open a Pull Request
+```
+
+**Priority areas for contribution:**
+- Mobile responsive optimization
+- Calendar integration (Google / Outlook)
+- Slack / Discord webhook integrations
+- Public REST API
+- Unit and integration tests
+- Accessibility improvements
 
 ---
+
+<br/>
+
+## ❓ Troubleshooting
+
+| Problem | Likely Cause | Solution |
+|---------|-------------|----------|
+| `FirebaseError: Firebase: Error (auth/...).` | Missing or incorrect Firebase env vars | Verify `NEXT_PUBLIC_FIREBASE_*` values in `.env` |
+| `Genkit flow returns empty response` | Missing `GEMINI_API_KEY` | Ensure `GEMINI_API_KEY` is set in `.env` |
+| `Module not found` | Dependencies not installed | Run `npm install` |
+| `PORT 3000 in use` | Another process on port 3000 | Kill the process or set `PORT=3001 next dev` |
+| `TypeScript errors after pull` | Type definitions updated | Run `npm install` to sync types |
+| `Firestore permission denied` | Security rules not configured | Set rules to `allow read, write: if true;` (dev only) |
+
+---
+
+<br/>
+
+## 🗺️ Roadmap
+
+### ✅ Current
+- [x] Hybrid intelligence architecture (deterministic + generative AI)
+- [x] Real-time bento-grid dashboard with Kanban boards
+- [x] AI Daily Planner using Knapsack heuristic
+- [x] Smart Task Assignment with 5-factor scoring
+- [x] Conversational AI assistant (Aura) via Genkit
+- [x] Team management with skill profiles and workload tracking
+- [x] Task timers and time tracking
+- [x] Dark / light theme support with Framer Motion transitions
+- [x] Drag-and-drop task management (react-dnd)
+- [x] Firebase Authentication & real-time Firestore sync
+- [x] Recharts analytics dashboard (velocity, completion, performance)
+- [x] Dual AI provider support (Gemini 2.5 Flash + GPT-4o-mini)
+
+### 🔄 In Progress
+- [ ] Calendar integration (Google / Outlook)
+- [ ] Recurring task templates and automation rules
+- [ ] Mobile responsive optimization
+- [ ] Slack / Discord integration for notifications
+
+### 📋 Planned
+- [ ] Public REST API for webhooks & third-party integration
+- [ ] Visual workflow builder (custom automation rules)
+- [ ] AI-powered sprint retrospectives
+- [ ] Offline-first support with Firestore persistence
+- [ ] Multi-workspace / organization support
+- [ ] Performance benchmarking & optimization
+
+---
+
+<br/>
 
 ## 📄 License
 
@@ -428,12 +748,55 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 
 ---
 
+<br/>
+
+## 👤 About
+
+**Prince Sherathiya** — Founder-Engineer at **WebTurnerAI**
+
+Building practical AI systems that solve real operational problems. Focused on backend infrastructure, workflow automation, and intelligent tooling that reduces manual effort for teams.
+
 <div align="center">
+  <br/>
+  <table>
+    <tr>
+      <td>🐙 <strong>GitHub</strong></td>
+      <td><a href="https://github.com/Aicodebyprince">@Aicodebyprince</a></td>
+    </tr>
+    <tr>
+      <td>💼 <strong>LinkedIn</strong></td>
+      <td><a href="https://linkedin.com/in/princesherathiya">Prince Sherathiya</a></td>
+    </tr>
+    <tr>
+      <td>🌐 <strong>Portfolio</strong></td>
+      <td><a href="https://prince-sherathiya.vercel.app">prince-sherathiya.vercel.app</a></td>
+    </tr>
+    <tr>
+      <td>📧 <strong>Email</strong></td>
+      <td><a href="mailto:princesherathiya123@gmail.com">princesherathiya123@gmail.com</a></td>
+    </tr>
+    <tr>
+      <td>🏢 <strong>Company</strong></td>
+      <td><strong>WebTurnerAI</strong> — practical AI systems for real operations</td>
+    </tr>
+  </table>
+  <br/>
+</div>
 
-**Built with ❤️ by [Aicodebyprince](https://github.com/Aicodebyprince)**
+---
 
-*Aura AI — Stop managing tasks. Start doing them.*
+<br/>
 
-⭐ If you found this project useful, give it a star!
-
+<div align="center">
+  <br/>
+  <sub>
+    Built with precision by
+    <strong>
+      <a href="https://github.com/Aicodebyprince">WebTurnerAI</a>
+    </strong>
+    — practical AI systems for real operations. No hype. Just working software.
+  </sub>
+  <br/><br/>
+  <img src="https://img.shields.io/badge/WebTurnerAI-practical_AI_systems_for_real_operations-6366F1?style=for-the-badge" alt="WebTurnerAI"/>
+  <br/><br/>
 </div>
